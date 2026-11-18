@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Portfolio Perks &amp; Programs | Vertex Ventures SEA &amp; India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   BRAND SETTINGS: swap these for the official Vertex values
+   ========================================================= */
+:root{
+  --brand-dark:   #004A8F;   /* Vertex Dark Blue: header, active states */
+  --brand-accent: #2484C6;   /* Vertex Medium Blue: buttons, links */
+  --brand-light:  #44C8F5;   /* Vertex Light Blue: highlights */
+  --brand-accent-soft: #E6F4FB;
+  --ink:          #0F172A;   /* body text */
+  --muted:        #5B6475;   /* secondary text */
+  --line:         #E3E7EE;   /* borders */
+  --bg:           #F6F8FB;   /* page background */
+  --card:         #FFFFFF;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--brand-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{background:var(--brand-dark);color:#fff;padding:28px 0 72px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(68,200,245,.35),transparent 65%);pointer-events:none}
+.facets{position:absolute;right:4%;top:50%;transform:translateY(-42%);width:min(360px,38vw);opacity:.9;pointer-events:none}
+.logo img{height:44px;display:block}
+.mono{background:var(--brand-accent-soft)!important;color:var(--brand-dark)!important}
+.btn-primary{background:var(--brand-accent)}
+.details-divider{color:var(--brand-dark)!important}
+@media (max-width:860px){.facets{display:none}}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px}
+.logo{font-weight:700;letter-spacing:.14em;font-size:15px;text-transform:uppercase}
+.logo span{opacity:.6;font-weight:500;letter-spacing:.08em;margin-left:8px;text-transform:none}
+.updated{font-size:13px;opacity:.7}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-light);font-weight:600;margin-bottom:14px}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;font-weight:700;max-width:720px;letter-spacing:-.02em}
+.lede{margin-top:18px;max-width:640px;font-size:17px;color:rgba(255,255,255,.85)}
+.stats{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap}
+.stat b{display:block;font-size:28px;font-weight:700}
+.stat small{font-size:13px;color:rgba(255,255,255,.65)}
+
+/* Controls */
+.controls{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:-36px;position:relative;z-index:2;
+  display:flex;gap:12px;flex-wrap:wrap;align-items:center;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+.search{flex:1 1 260px;position:relative}
+.search input{width:100%;padding:11px 14px 11px 38px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;outline:none}
+.search input:focus{border-color:var(--brand-accent);box-shadow:0 0 0 3px var(--brand-accent-soft)}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.chip:hover{border-color:var(--brand-accent)}
+.chip.active{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+
+/* Grid */
+main{padding:32px 0 64px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px;
+  transition:border-color .15s, box-shadow .15s, transform .15s}
+.card:hover{border-color:#C9D4EA;box-shadow:0 10px 28px rgba(15,23,42,.07);transform:translateY(-2px)}
+.card-head{display:flex;align-items:center;gap:12px}
+.mono{width:44px;height:44px;border-radius:10px;background:var(--brand-accent-soft);color:var(--brand-accent);display:grid;place-items:center;font-weight:700;font-size:16px;flex-shrink:0}
+.card-head h3{font-size:18px;font-weight:600;line-height:1.2}
+.tag{font-size:12px;color:var(--muted)}
+.headline{font-size:15px;font-weight:600;color:var(--ink)}
+.meta{font-size:14px;color:var(--muted);display:grid;gap:6px}
+.meta div{display:flex;gap:8px}
+.meta .k{min-width:62px;color:#8A93A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.card-foot{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:6px}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:9px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;border:1px solid transparent;text-decoration:none!important}
+.btn-primary{background:var(--brand-accent);color:#fff}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--brand-accent)}
+.empty{text-align:center;color:var(--muted);padding:48px 0;display:none}
+
+/* Detail drawer */
+.overlay{position:fixed;inset:0;background:rgba(0,40,80,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(560px,100%);background:#fff;z-index:21;transform:translateX(100%);transition:transform .25s ease;
+  overflow-y:auto;box-shadow:-12px 0 40px rgba(15,23,42,.15)}
+.drawer.open{transform:none}
+.drawer-inner{padding:32px}
+.close{position:absolute;top:18px;right:18px;border:none;background:var(--bg);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:var(--muted)}
+.drawer h2{font-size:26px;font-weight:700;margin-top:14px;letter-spacing:-.01em}
+.drawer section{margin-top:26px}
+.drawer h4{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8A93A3;margin-bottom:10px;font-weight:600}
+.drawer ul,.drawer ol{padding-left:20px;display:grid;gap:6px}
+.drawer p{color:var(--ink)}
+.code{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px dashed #C3CDE0;border-radius:10px;padding:10px 14px;margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:15px}
+.code button{margin-left:auto}
+.details-divider{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-accent)}
+.drawer .intro{font-weight:600;margin-bottom:8px}
+.drawer li{font-size:15px}
+.note{background:#FFF8E6;border:1px solid #F3DFA8;color:#7A5A00;border-radius:10px;padding:12px 14px;font-size:14px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+@media (max-width:600px){
+  .stats{gap:24px}
+  .drawer-inner{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="logo"><img src="data:image/png;base64,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" alt="Vertex Ventures SEA &amp; India"></div>
+      <div class="updated" id="updated"></div>
+    </div>
+    <div class="eyebrow">Portfolio Platform</div>
+    <h1>Perks and programs for Vertex portfolio companies</h1>
+    <p class="lede">We've partnered with leading technology companies to give our founders credits, discounts and direct support. Find what's available, who to contact, and how to claim it.</p>
+    <div class="stats">
+      <div class="stat"><b id="stat-partners">0</b><small>Partners</small></div>
+      <div class="stat"><b>US$1M+</b><small>In cloud &amp; AI credits</small></div>
+      <div class="stat"><b id="stat-cats">0</b><small>Categories</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="controls">
+    <label class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search partners or perks" aria-label="Search partners or perks">
+    </label>
+    <div class="chips" id="chips"></div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">No partners match your search.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Questions about a perk, or can't find what you need? Email Rahul at <a href="mailto:rahul.thayyalamkandy@vertexventures.com">rahul.thayyalamkandy@vertexventures.com</a>.</div>
+    <div>&copy; <span id="year"></span> Vertex Ventures Southeast Asia &amp; India. For portfolio companies only.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <div class="drawer-inner" id="drawer-body"></div>
+</aside>
+
+<script>
+/* =========================================================
+   PAGE SETTINGS
+   ========================================================= */
+const LAST_UPDATED = "November 2026";
+
+/* =========================================================
+   PARTNER DATA: edit, add or remove entries here.
+   Fields:
+     name, category, headline (one line shown on card)
+     perks:   list of bullet points
+     steps:   list of how-to-access steps (may include links)
+     code:    optional promo / referral code
+     contact: { name, email, url }  (any can be left blank)
+     links:   [{ label, url }]
+     note:    optional callout shown in the detail panel
+   ========================================================= */
+const PARTNERS = [
+  {
+    name: "Anthropic",
+    category: "AI Models",
+    headline: "US$50K in API credits, plus Claude for Teams",
+    perks: [
+      "US$50,000 in Claude API credits, valid for 12 months",
+      "3-month free trial of Claude for Teams",
+      "US$10,000 in Claude for Teams usage credits (150 seats)"
+    ],
+    sections: [
+      { title: "How the API credit grants work", items: [
+        "You receive an initial US$10,000 grant.",
+        "Each additional grant unlocks once you've used most of your existing credit balance, up to the US$50,000 total."
+      ]},
+      { title: "Eligibility: API credits", items: [
+        "Companies that haven't applied to the program or received credits in the last 6 months are eligible.",
+        "If you were granted credits in the last 6 months, the new benefit is applied to your account automatically.",
+        "If you received credits more than 6 months ago, contact your Anthropic rep to check whether you qualify for an additional grant."
+      ]},
+      { title: "Eligibility: Claude for Teams trial", items: [
+        "Open to teams without an active Claude for Teams or Claude for Enterprise subscription (new subscribers only)."
+      ]}
+    ],
+    steps: [
+      "Apply for the US$50,000 API credits using the <a href=\"https://platform.claude.com/offers/661aa5f3-a48a-425e-a560-15a244019e48\" target=\"_blank\" rel=\"noopener\">API credits link</a>.",
+      "Apply for the free Claude for Teams trial using the <a href=\"https://claude.ai/offers/65309854-973e-463d-9325-db8407a8ec72\" target=\"_blank\" rel=\"noopener\">Claude for Teams link</a> (new subscribers only).",
+      "You'll need to log in or create an Anthropic account for each.",
+      "For questions, email the Anthropic portfolio team."
+    ],
+    contact: [{ name: "Yeop Lee", email: "yeop@anthropic.com" }, { name: "Anthropic Portfolio Team", email: "portfolio+vertex@anthropic.com" }],
+    links: [
+      { label: "Apply for API credits", url: "https://platform.claude.com/offers/661aa5f3-a48a-425e-a560-15a244019e48" },
+      { label: "Claim Claude for Teams trial", url: "https://claude.ai/offers/65309854-973e-463d-9325-db8407a8ec72" }
+    ]
+  },
+  {
+    name: "OpenAI",
+    category: "AI Models",
+    headline: "US$30K in OpenAI API credits",
+    perks: ["US$30,000 in OpenAI API credits"],
+    steps: ["Apply through the Vertex partner page for OpenAI for Startups."],
+    contact: { name: "Jasmine Liew", email: "jaliew@openai.com" },
+    links: [{ label: "Apply for OpenAI credits", url: "https://openai-for-startups.vercel.app/p/zxjw6rtvydjs87" }]
+  },
+  {
+    name: "Google Cloud",
+    category: "Cloud & Compute",
+    headline: "Up to US$350K in Google Cloud credits",
+    perks: ["Up to US$350,000 in Google Cloud credits for eligible AI-first startups"],
+    steps: ["Apply through the Google for Startups Cloud Program."],
+    contact: { name: "Fannie Soubiele", email: "fanniesoubiele@google.com" },
+    links: [{ label: "Apply on Google Cloud for Startups", url: "https://cloud.google.com/startup" }]
+  },
+  {
+    name: "Microsoft for Startups",
+    category: "Cloud & Compute",
+    headline: "Up to US$350K in Azure credits, plus GitHub, LinkedIn & more",
+    perks: [
+      "Up to US$350,000 in Azure credits, usable on Azure-native AI workloads such as Azure OpenAI",
+      "Credits cover AI and Microsoft Foundry, cloud infrastructure, compute, data, security and developer tooling, including eligible GitHub Copilot, Codespaces and GitHub Actions usage",
+      "Azure technical support",
+      "Additional benefits across GitHub Enterprise, LinkedIn Premium, Microsoft apps and more"
+    ],
+    sections: [
+      { title: "Also worth exploring", items: [
+        "Microsoft Foundry: one platform for models and AI, with access to 11,000+ models.",
+        "Fireworks AI on Microsoft Foundry: high-performance, low-latency open model inference on Azure (models include GLM, Kimi and Qwen)."
+      ]}
+    ],
+    steps: [
+      "Go to <a href=\"https://startups.microsoft.com\" target=\"_blank\" rel=\"noopener\">startups.microsoft.com</a>.",
+      "Click <b>Get started now</b>.",
+      "Select <b>Apply with your code</b> and enter the Vertex code below.",
+      "Use a personal email address. Microsoft requires one for credit activation.",
+      "The person who registers the code becomes the admin of your company's Microsoft for Startups account. You can add team members later in the portal settings."
+    ],
+    code: "3630OM1BQL",
+    contact: { name: "Belle Lim", email: "bellelim@microsoft.com" },
+    links: [{ label: "Microsoft for Startups", url: "https://startups.microsoft.com" }],
+    note: "Approval usually takes up to 3 business days, so create your account and activate the code early."
+  },
+  {
+    name: "AWS",
+    category: "Cloud & Compute",
+    headline: "Up to US$200K in AWS credits, plus build, sell and go-to-market support",
+    perks: [
+      "AWS Activate Portfolio tier: up to US$200,000 in AWS credits for pre-Series B startups",
+      "A dedicated solutions architect, plus architecture, security and migration support",
+      "Exclusive for Vertex companies, at no cost: AI-DLC sessions and Co-Build Labs",
+      "Help selling through AWS Marketplace, co-selling with AWS, and enterprise customer introductions"
+    ],
+    sections: [
+      { title: "1. Fund: credits to extend your runway", items: [
+        "<b>AWS Activate, Portfolio tier:</b> up to US$200K in AWS credits for pre-Series B startups. Apply at AWS Activate, choose Portfolio, and enter Vertex's Activate Org ID (email <a href=\"mailto:rahul.thayyalamkandy@vertexventures.com\">Rahul</a> at Vertex; only Vertex can share it).",
+        "<b>Timing matters:</b> your most recent funding round must be within the last 12 months. Request the Org ID as soon as your round closes.",
+        "<b>Credits beyond Activate:</b> AI-specific credit programs, plus case-by-case funding for migrations, proofs of concept and new workloads.",
+        "<b>Cohort programs:</b> the Generative AI Accelerator and Compute for Climate run in cohorts. AWS will flag the next cohort to Vertex founders."
+      ]},
+      { title: "2. Build: technical experts on your team", items: [
+        "A solutions architect (SA) to help you design, scale and troubleshoot.",
+        "Well-Architected reviews, security health checks (including PCI-DSS readiness for fintechs) and cost optimisation.",
+        "SA-designed migrations from other clouds or self-managed databases, including no-cost migration assessments with AWS partners.",
+        "AWS Generative AI Innovation Center: AWS scientists and engineers who take AI ideas from proof of concept to production.",
+        "Specialist teams for generative AI, physical AI and robotics, data and analytics, fintech, Web3 and climate."
+      ]},
+      { title: "Exclusive for Vertex portfolio companies, at no cost", intro: "Open to every Vertex portfolio company. You don't need to be an existing AWS customer.", items: [
+        "<b>AI-Driven Development Lifecycle (AI-DLC) sessions:</b> AWS SAs work hands-on with your engineers to apply AI at every step from spec to deployment, using Kiro and Amazon Bedrock. Your team leaves with an AI-led workflow it can keep using.",
+        "<b>Co-Build Labs:</b> AWS SAs build alongside your team on a commercially important problem, such as an AI feature, a migration, or a cost or scale bottleneck. You bring the problem and the people; AWS brings architects and specialists."
+      ]},
+      { title: "AI on AWS", items: [
+        "Amazon Bedrock: 100+ foundation models from 19 providers through one API, including Anthropic Claude, Amazon Nova, OpenAI GPT, xAI Grok, Meta Llama, Qwen, DeepSeek, Mistral and Gemma.",
+        "Amazon Bedrock AgentCore: runs AI agents in production; available in Singapore, Malaysia and Thailand.",
+        "Kiro: AWS's spec-driven AI IDE that turns specs into working code."
+      ]},
+      { title: "3. Sell: reach customers through AWS", items: [
+        "<b>AWS Marketplace:</b> list your software where enterprises already buy. Customers pay from existing AWS budgets, which shortens procurement. Fees: 3% on SaaS listings, dropping to 2% on private offers at US$1M+ and 1.5% at US$10M+; 0.5% for professional services.",
+        "<b>India-based sellers:</b> sell to buyers in India through AWS India, with private offers priced in INR or USD and payouts in INR.",
+        "<b>Channel partner private offers:</b> resellers and system integrators sell your product on Marketplace for you.",
+        "<b>ISV Accelerate:</b> co-sell with AWS account teams, who are incentivised to sell your Marketplace product.",
+        "<b>AWS Partner Network:</b> 140,000+ partners in 200+ countries. The Foundational Technical Review unlocks partner and co-sell benefits, and AWS SAs help you prepare."
+      ]},
+      { title: "4. Access: experts and doors across Amazon", items: [
+        "Introductions to enterprise buyers across the region through AWS account teams.",
+        "Executive sessions with AWS leadership and deep dives with AWS service teams.",
+        "Amazon Global Selling for consumer brands (Amazon.com and 20+ Amazon stores). Singapore brands can join the Cross-border Brand Launchpad for up to 18 months of account support.",
+        "Amazon Sustainability Deep Tech Accelerator (global, equity-free), Amazon Industrial Innovation Fund, and the Alexa Fund.",
+        "AWS re:Invent, AWS Summits across the region, and AWS Startups events and workshops."
+      ]}
+    ],
+    steps: [
+      "Email Ajay Taunk for anything listed here, including a 1:1 with Ajay, your AWS account manager and an SA, an AI-DLC session or a Co-Build Lab.",
+      "For credits, email <a href=\"mailto:rahul.thayyalamkandy@vertexventures.com\">Rahul</a> at Vertex for the Activate Org ID, then apply at <a href=\"https://aws.amazon.com/startups/credits\" target=\"_blank\" rel=\"noopener\">AWS Activate</a> and choose Portfolio.",
+      "Already on AWS or past Series A? Reach out anyway. The build, sell and access support applies at every stage."
+    ],
+    contact: { name: "Ajay Taunk", email: "ajtaunk@amazon.com" },
+    links: [{ label: "AWS Activate", url: "https://aws.amazon.com/startups/credits" }],
+    note: "Engage early: credits go further before your burn ramps, and architecture advice costs less before tech debt sets in. Program details as of November 2026; AWS sets eligibility and terms, which can change."
+  },
+  {
+    name: "Databricks",
+    category: "Data & AI Platforms",
+    headline: "Up to US$100K in free credits, or pay US$15K for US$50K of usage",
+    perks: [
+      "Vertex is a Tier 1 VC in the Databricks for Startups program, so portfolio companies get the highest-value offers and fast-tracked applications",
+      "Early stage: up to US$100K in free credits (US$50K Databricks + US$50K Neon), no commitment",
+      "Growth stage: commit US$15K a year and get US$50K of Databricks usage"
+    ],
+    sections: [
+      { title: "Offer 1: Tier 1 product-led offer (early stage)", intro: "Up to US$100K in free credits, no commitment.", items: [
+        "US$50K in Databricks credits: US$10K upfront, then top-ups as you use them.",
+        "US$50K in Neon credits for serverless Postgres, the transactional database for your application layer.",
+        "Up to US$10K of the Databricks credits can go to Foundation Model API usage.",
+        "Valid for 12 months or until used, on AWS or GCP.",
+        "<b>Eligibility:</b> backed by Vertex, raised US$1M or more, and not yet working with a Databricks account executive."
+      ]},
+      { title: "Offer 2: Tier 1 Startup Commit (growth stage)", intro: "Pay US$15K, get US$50K of usage.", items: [
+        "A US$15K annual commitment unlocks US$50K of Databricks usage: US$35K more than you pay.",
+        "Free Business-tier support and a dedicated Databricks account team.",
+        "12-month minimum term. Credits are released when the commit is signed, on AWS or GCP.",
+        "<b>Eligibility:</b> backed by Vertex, funded in the last 24 months, and building real data and AI workloads."
+      ]},
+      { title: "Beyond credits", items: [
+        "Applications from Vertex-referred founders are fast-tracked and routed straight to the right offer and account team.",
+        "Solution Architect sessions to review architecture and design data and AI workloads.",
+        "Custom point-of-view documents for selected Vertex portfolio companies, covering use cases, industry fit and these offers.",
+        "Go-to-market support through the Built on Databricks partner program, for companies building their product on Databricks.",
+        "Invitations to Databricks founder events such as Ground Truth and Prompt to P&L.",
+        "Priority consideration for the Databricks APAC AI Accelerator, where Vertex is the Primary VC partner."
+      ]},
+      { title: "Why founders use Databricks", items: [
+        "<b>Cost:</b> start free or with a small commitment, and see AI and data spend per customer and per feature as you scale.",
+        "<b>Choice:</b> use any model, open-source or proprietary, on AWS or GCP, with open data formats you own.",
+        "<b>Control:</b> one governance layer for data and AI from day one, which enterprise buyers in fintech, healthcare and logistics expect."
+      ]}
+    ],
+    steps: [
+      "Apply at <a href=\"https://www.databricks.com/product/startups\" target=\"_blank\" rel=\"noopener\">databricks.com/product/startups</a> and name Vertex Ventures as your investor.",
+      "For the fastest route, email <a href=\"mailto:rahul.thayyalamkandy@vertexventures.com\">Rahul</a> at Vertex for an intro to Dilip Mukkavalli at Databricks."
+    ],
+    contact: { name: "Dilip Mukkavalli", email: "dilip.mukkavalli@databricks.com" },
+    links: [{ label: "Apply to Databricks for Startups", url: "https://www.databricks.com/product/startups" }],
+    note: "All offers are subject to eligibility review and approval by the Databricks for Startups team. Terms may change, offers can't be combined with other Databricks promotions, and credits are non-transferable with no cash value."
+  },
+  {
+    name: "Nebius",
+    category: "Cloud & Compute",
+    headline: "Priority access to H100, H200, B200 and B300 GPU capacity",
+    perks: [
+      "56 H100s (Finland)",
+      "240 H200s (Paris)",
+      "136 B200s (Kansas)",
+      "4,000 B300s (Estonia)"
+    ],
+    steps: ["Email Gwenllian Ching at Nebius with the compute you need to check current availability and allocation."],
+    contact: { name: "Gwenllian Ching", email: "gwenllian.ching@nebius.com" },
+    links: [],
+    note: "GPU availability changes often. Numbers shown are indicative; confirm with Nebius before planning around them."
+  },
+  {
+    name: "Stripe",
+    category: "Finance & Payments",
+    headline: "Startup benefits through the Vertex partnership",
+    perks: ["Stripe startup benefits for Vertex portfolio companies"],
+    steps: ["Claim through the Vertex Ventures page on Stripe Startup Benefits."],
+    contact: { name: "Richard Ong", email: "rong@stripe.com" },
+    links: [{ label: "Claim Stripe benefits", url: "https://stripe.com/en-my/startup-benefits/vertex-ventures" }]
+  },
+  {
+    name: "Airwallex",
+    category: "Finance & Payments",
+    headline: "Startup benefits through the Vertex partnership",
+    perks: ["Airwallex startup benefits for Vertex portfolio companies"],
+    steps: ["Claim through the Airwallex x Vertex Ventures page."],
+    contact: { name: "Gladys Yuen", email: "gladys.yuen@airwallex.com" },
+    links: [{ label: "Claim Airwallex benefits", url: "https://discover.airwallex.com/airwallex-x-vertex-ventures" }]
+  },
+  {
+    name: "Aspire",
+    category: "Finance & Payments",
+    headline: "Up to S$635K (approx. US$489K) in partner rewards",
+    perks: ["Up to S$635,000 in partner rewards (approx. US$489,000)"],
+    steps: ["Claim through the Aspire x Vertex startup page."],
+    contact: { name: "Finnley Lee", email: "finnley@aspireapp.com" },
+    links: [{ label: "Claim Aspire rewards", url: "https://aspireapp.com/en-sg/startup/vertex?utm_medium=startup&utm_campaign=vertex&utm_source=direct" }]
+  },
+  {
+    name: "Deel",
+    category: "HR & Operations",
+    headline: "US$5K in Deel credits",
+    perks: ["US$5,000 in Deel credits"],
+    steps: ["Claim through the Deel x Vertex partner page."],
+    contact: { name: "Chloe Xue", email: "chloe.xue@deel.com" },
+    links: [{ label: "Claim Deel credits", url: "https://www.deel.com/partners/vertex/" }]
+  },
+  {
+    name: "Notion",
+    category: "Productivity",
+    headline: "Partner perks and programs",
+    perks: ["See the Notion page for the full list of perks and programs"],
+    steps: ["Open the Notion page for details and claim instructions."],
+    contact: { name: "Alex Dam", email: "alex.dam@makenotion.com" },
+    links: [{ label: "View Notion perks", url: "https://app.notion.com/p/List-of-Perks-and-Programs-from-our-14-Partners-4c3613ae57dd49f5972870b48c406edd?__dm_a=1" }]
+  }
+];
+
+/* =========================================================
+   Rendering (no need to edit below this line)
+   ========================================================= */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const initials = n => n.split(/\s+/).filter(w => /^[A-Za-z]/.test(w)).slice(0,2).map(w => w[0]).join("").toUpperCase();
+const stripTags = s => s.replace(/<[^>]+>/g, "");
+
+const categories = ["All", ...Array.from(new Set(PARTNERS.map(p => p.category)))];
+let activeCat = "All";
+
+$("#updated").textContent = "Last updated " + LAST_UPDATED;
+$("#year").textContent = new Date().getFullYear();
+$("#stat-partners").textContent = PARTNERS.length;
+$("#stat-cats").textContent = categories.length - 1;
+
+function contactHTML(c){
+  if (Array.isArray(c)) return c.map(contactHTML).join("<br>");
+  if (!c || (!c.name && !c.email && !c.url)) return '<span>Rahul (Vertex) &middot; <a href="mailto:rahul.thayyalamkandy@vertexventures.com">rahul.thayyalamkandy@vertexventures.com</a></span>';
+  const parts = [];
+  if (c.name) parts.push(esc(c.name));
+  if (c.email) parts.push(`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`);
+  else if (c.url) parts.push(`<a href="${esc(c.url)}" target="_blank" rel="noopener">Contact page</a>`);
+  return parts.join(" &middot; ");
+}
+
+function renderChips(){
+  $("#chips").innerHTML = categories.map(c =>
+    `<button class="chip ${c===activeCat?"active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(b => b.onclick = () => { activeCat = b.dataset.cat; renderChips(); renderGrid(); });
+}
+
+function renderGrid(){
+  const q = $("#q").value.trim().toLowerCase();
+  const list = PARTNERS.map((p,i) => ({...p, i})).filter(p => {
+    if (activeCat !== "All" && p.category !== activeCat) return false;
+    if (!q) return true;
+    const extra = (p.sections || []).flatMap(s => [s.title, s.intro || "", ...s.items]);
+    const hay = stripTags([p.name, p.category, p.headline, ...p.perks, ...extra].join(" ")).toLowerCase();
+    return hay.includes(q);
+  });
+  $("#grid").innerHTML = list.map(p => {
+    const primary = p.links && p.links[0];
+    return `
+    <article class="card">
+      <div class="card-head">
+        <div class="mono">${initials(p.name)}</div>
+        <div><h3>${esc(p.name)}</h3><div class="tag">${esc(p.category)}</div></div>
+      </div>
+      <div class="headline">${esc(p.headline)}</div>
+      <div class="meta">
+        <div><span class="k">Contact</span><span>${contactHTML(p.contact)}</span></div>
+        <div><span class="k">Access</span><span>${esc(stripTags(p.steps[0]))}</span></div>
+      </div>
+      <div class="card-foot">
+        <button class="btn btn-ghost" data-open="${p.i}">View details</button>
+        ${primary ? `<a class="btn btn-primary" href="${esc(primary.url)}" target="_blank" rel="noopener">${esc(primary.label)} &rarr;</a>` : ""}
+      </div>
+    </article>`;
+  }).join("");
+  $("#empty").style.display = list.length ? "none" : "block";
+  document.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openDrawer(+b.dataset.open));
+}
+
+function openDrawer(i){
+  const p = PARTNERS[i];
+  $("#drawer-body").innerHTML = `
+    <div class="card-head">
+      <div class="mono">${initials(p.name)}</div>
+      <div class="tag">${esc(p.category)}</div>
+    </div>
+    <h2>${esc(p.name)}</h2>
+    <section><h4>What you get</h4><ul>${p.perks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></section>
+    <section><h4>How to access</h4><ol>${p.steps.map(x => `<li>${x}</li>`).join("")}</ol>
+      ${p.code ? `<div class="code"><span>${esc(p.code)}</span><button class="btn btn-ghost" id="copy">Copy code</button></div>` : ""}
+    </section>
+    <section><h4>Contact</h4><p>${contactHTML(p.contact)}</p></section>
+    ${p.links && p.links.length ? `<section><h4>Links</h4><div style="display:flex;gap:10px;flex-wrap:wrap">${p.links.map(l =>
+      `<a class="btn btn-primary" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} &rarr;</a>`).join("")}</div></section>` : ""}
+    ${p.note ? `<section><div class="note">${esc(p.note)}</div></section>` : ""}
+    ${p.sections && p.sections.length ? `<div class="details-divider">Full details</div>` + p.sections.map(s => `
+      <section><h4>${esc(s.title)}</h4>
+        ${s.intro ? `<p class="intro">${s.intro}</p>` : ""}
+        <ul>${s.items.map(x => `<li>${x}</li>`).join("")}</ul>
+      </section>`).join("") : ""}
+  `;
+  const copy = $("#copy");
+  if (copy) copy.onclick = () => {
+    navigator.clipboard.writeText(p.code).then(() => { copy.textContent = "Copied"; setTimeout(() => copy.textContent = "Copy code", 1500); });
+  };
+  $("#drawer").classList.add("open"); $("#overlay").classList.add("open");
+  $("#drawer").setAttribute("aria-hidden","false");
+}
+function closeDrawer(){
+  $("#drawer").classList.remove("open"); $("#overlay").classList.remove("open");
+  $("#drawer").setAttribute("aria-hidden","true");
+}
+$("#close").onclick = closeDrawer;
+$("#overlay").onclick = closeDrawer;
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+$("#q").addEventListener("input", renderGrid);
+
+renderChips();
+renderGrid();
+</script>
+</body>
+</html>
