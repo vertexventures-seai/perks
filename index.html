@@ -230,8 +230,8 @@ const PARTNERS = [
     name: "OpenAI",
     domain: "openai.com",
     category: "AI Models",
-    headline: "US$30K in OpenAI API credits",
-    perks: ["US$30,000 in OpenAI API credits"],
+    headline: "US$30K in OpenAI API credits + 10 ChatGPT Business seats with Codex for 3 months",
+    perks: ["US$30,000 in OpenAI API credits", "10 ChatGPT Business seats with Codex, free for 3 months"],
     steps: ["Apply through the Vertex partner page for OpenAI for Startups."],
     contact: { name: "Jasmine Liew", email: "jaliew@openai.com" },
     links: [{ label: "Apply for OpenAI credits", url: "https://openai-for-startups.vercel.app/p/zxjw6rtvydjs87" }]
@@ -240,11 +240,33 @@ const PARTNERS = [
     name: "Google Cloud",
     domain: "cloud.google.com",
     category: "Cloud & Compute",
-    headline: "Up to US$350K in Google Cloud credits",
-    perks: ["Up to US$350,000 in Google Cloud credits for eligible AI-first startups"],
-    steps: ["Apply through the Google for Startups Cloud Program."],
+    headline: "Up to US$200K in Google Cloud credits (US$350K for AI startups)",
+    perks: [
+      "Google Cloud credits up to US$200K over 2 years (US$350K for AI startups), based on funding milestones",
+      "Technical help, including office hours and workshops",
+      "A dedicated Customer Engineer and startup success team to help you navigate Google Cloud",
+      "Google Workspace Business Plus for 1 year (new sign-ups only)",
+      "US$600 a month in Google Maps Platform credits for 1 year",
+      "Additional exclusive partner offers from companies such as MongoDB, GitLab and ElevenLabs"
+    ],
+    sections: [
+      { title: "Eligibility", items: [
+        "VC-backed, pre-seed to Series A (Series A within the last 12 months).",
+        "Funded in the last 5 years.",
+        "Not previously enrolled, and haven't received more than US$5K in Google Cloud credits.",
+        "<b>AI tier (US$350K):</b> startups that use or plan to use Vertex AI or Gemini to deploy AI services as the foundation of their primary product."
+      ]}
+    ],
+    steps: [
+      "Apply through the <a href=\"https://cloud.google.com/startup/apply?utm_source=VCscaled&utm_medium=partner&utm_campaign=FY21-Q1-global-demandgen-website-cs-startup_program_mc&utm_content=investor_resources&utm_term=-\" target=\"_blank\" rel=\"noopener\">Google for Startups Cloud Program</a>.",
+      "In your application, state your funding and include a link to your company on the Vertex portfolio page (vertexventures.sg) for verification.",
+      "Before applying, <a href=\"https://drive.google.com/file/d/11vne5mAMw0JaNCdfCMSJzpQO2CMaB7pW/view\" target=\"_blank\" rel=\"noopener\">review this guide</a> to best practices for your application."
+    ],
     contact: { name: "Fannie Soubiele", email: "fanniesoubiele@google.com" },
-    links: [{ label: "Apply on Google Cloud for Startups", url: "https://cloud.google.com/startup" }]
+    links: [
+      { label: "Apply for Google Cloud credits", url: "https://cloud.google.com/startup/apply?utm_source=VCscaled&utm_medium=partner&utm_campaign=FY21-Q1-global-demandgen-website-cs-startup_program_mc&utm_content=investor_resources&utm_term=-" },
+      { label: "Application best practices (PDF)", url: "https://drive.google.com/file/d/11vne5mAMw0JaNCdfCMSJzpQO2CMaB7pW/view" }
+    ]
   },
   {
     name: "Microsoft for Startups",
@@ -445,11 +467,11 @@ const PARTNERS = [
     name: "Notion",
     domain: "notion.so",
     category: "Productivity",
-    headline: "Partner perks and programs",
-    perks: ["See the Notion page for the full list of perks and programs"],
-    steps: ["Open the Notion page for details and claim instructions."],
+    headline: "Up to 6 months of Notion's Business Plan free (worth US$12K), with Notion AI included",
+    perks: ["Up to 6 months of Notion's Business Plan for free (valued at US$12,000)", "Notion AI included"],
+    steps: ["Click the link and press <b>Unlock Startup Offer</b> to go through the onboarding process and claim your perk."],
     contact: { name: "Alex Dam", email: "alex.dam@makenotion.com" },
-    links: [{ label: "View Notion perks", url: "https://app.notion.com/p/List-of-Perks-and-Programs-from-our-14-Partners-4c3613ae57dd49f5972870b48c406edd?__dm_a=1" }]
+    links: [{ label: "Unlock Notion offer", url: "https://ntn.so/vertexventures" }]
   }
 ];
 
